@@ -52,4 +52,3 @@ export interface State<T> {
   readonly future: readonly T[];
   readonly options: UndoOptions;
 }
-export interface InitialState<T> extends State<T> {}

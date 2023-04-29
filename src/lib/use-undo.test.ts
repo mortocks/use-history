@@ -1,5 +1,5 @@
 import { act, renderHook } from '@testing-library/react-hooks/native';
-import { expect, describe, test, vi, beforeEach, afterEach } from 'vitest';
+import { afterEach, beforeEach, describe, expect, test, vi } from 'vitest';
 
 import useUndo from './use-undo';
 

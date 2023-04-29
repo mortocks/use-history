@@ -3,7 +3,7 @@ import { useCallback, useReducer } from 'react';
 
 import {
   ActionType,
-  type InitialState,
+  type State,
   type UndoActions,
   type UndoOptions,
 } from '../types/example';
@@ -18,13 +18,13 @@ const defaultOpts: UndoOptions = {
 const useUndo = <T>(
   initialPresent?: T,
   opts: Partial<UndoOptions> = {}
-): [InitialState<T>, UndoActions<T>] => {
+): [State<T>, UndoActions<T>] => {
   const options = {
     ...defaultOpts,
     ...opts,
   };
 
-  const initialState: InitialState<T> = {
+  const initialState: State<T> = {
     past: [],
     present: initialPresent,
     future: [],
