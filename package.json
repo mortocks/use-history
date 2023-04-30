@@ -1,5 +1,5 @@
 {
-  "name": "use-history",
+  "name": "use-history-ts",
   "version": "1.0.0",
   "description": "Flexible hooks for adding undo support to your react app",
   "main": "build/main/index.js",
@@ -39,7 +39,7 @@
     "prepare-release": "run-s reset-hard test cov:check doc:html version doc:publish"
   },
   "engines": {
-    "node": ">=20"
+    "node": ">=16"
   },
   "dependencies": {
     "lodash": "^4.17.21",
