@@ -8,7 +8,7 @@ import {
   type UndoOptions,
 } from '../types/example';
 
-import reducer from './reducer';
+import { createDataFetchReducer } from './reducer';
 
 const defaultOpts: UndoOptions = {
   maxHistory: undefined,
@@ -31,7 +31,7 @@ const useUndo = <T>(
     options,
   };
 
-  const [state, dispatch] = useReducer(reducer<T>, {
+  const [state, dispatch] = useReducer(createDataFetchReducer<T>(), {
     ...initialState,
   });
 
@@ -65,8 +65,7 @@ const useUndo = <T>(
         newPresent,
         historyCheckpoint: checkpoint,
       });
-    }, 0),
-
+    }, 1000),
     []
   );
 
